@@ -4,7 +4,7 @@ import '../../Styles/Card.scss';
 
 const Card = (props) => {
   const cards = `card ${props.className}`;
-  return <div className={cards}>{props.children}</div>;
+  return <section className={cards}>{props.children}</section>;
 };
 
 export default Card;

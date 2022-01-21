@@ -20,10 +20,8 @@ const App = () => {
   const expenseComp = [expenses1, expenses2, expenses3, expenses4];
   return (
     <div>
-      <div className="container">
-        <ExpenseFormWrapper />
-        <Expenses items={expenseComp} />
-      </div>
+      <ExpenseFormWrapper />
+      <Expenses items={expenseComp} />
     </div>
   );
 };

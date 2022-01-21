@@ -1,12 +1,13 @@
 import React from 'react';
 import '../../Styles/ExpenseFormWrapper.scss';
 import ExpenseForm from './ExpenseForm';
+import Card from '../UI/Card';
 
 const ExpenseNew = () => {
   return (
-    <div className="new__expense">
+    <Card className="new__expense">
       <ExpenseForm />
-    </div>
+    </Card>
   );
 };
 

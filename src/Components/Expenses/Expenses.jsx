@@ -3,6 +3,7 @@ import React from 'react';
 import ExpenseItem from './ExpenseItem';
 import Card from '../UI/Card';
 import '../../Styles/Expenses.scss';
+import ExpenseForm from '../ExpenseNew/ExpenseForm';
 
 const Expenses = (props) => {
   return (
