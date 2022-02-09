@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import '../../Styles/ExpenseForm.scss';
 
-const ExpenseForm = () => {
+const ExpenseForm = ({ onSaveExpensesData, onShowForm }) => {
   // ! Cara multiple useState dipisah satu-satu useState
 
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
+  const [message, setMessage] = useState('');
 
   /*
    ! Cara multiple useState dijadiin satu useState
@@ -73,23 +74,30 @@ const ExpenseForm = () => {
 
     const newInput = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
+
+    !enteredTitle || !enteredAmount || !enteredDate
+      ? setMessage('Input Data Expanses!!')
+      : onSaveExpensesData(newInput);
 
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
-
-    return newInput;
   };
 
   return (
     <form onSubmit={onSubmitHandler}>
+      <h1 style={{ color: '#800000' }}>{message}</h1>
       <div className="new__expense--controls">
         <div className="new__expense--control">
           <label htmlFor="">Title</label>
-          <input type="text" value={enteredTitle} onChange={titleChangeHandler} />
+          <input
+            type="text"
+            value={enteredTitle}
+            onChange={titleChangeHandler}
+          />
         </div>
 
         <div className="new__expense--control">
@@ -117,6 +125,9 @@ const ExpenseForm = () => {
 
       <div className="new__expense--actions">
         <button type="submit">Add Expense</button>
+        <button type="button" onClick={onShowForm}>
+          Cancel
+        </button>
       </div>
     </form>
   );
