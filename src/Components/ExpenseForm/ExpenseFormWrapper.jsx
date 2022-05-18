@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
-import '../../Styles/ExpenseFormWrapper.scss';
-import ExpenseForm from './ExpenseForm';
-import Card from '../UI/Card';
+import React, { useState } from "react";
+import "../../Styles/ExpenseFormWrapper.scss";
+import ExpenseForm from "./ExpenseForm";
+import Card from "../UI/Card";
 
-const ExpenseFormWrapper = ({ onExpensesFormNew }) => {
+const ExpenseFormWrapper = ({ onExpensesFormNew, newLocalStorage }) => {
   const [showForm, setShowForm] = useState(false);
-
-  const GenerateID = () => Date.now();
 
   const saveExpensesData = (expensesData) => {
     const expensesDataObj = {
       ...expensesData,
-      id: GenerateID(),
+      id: Date.now(),
     };
 
     onExpensesFormNew(expensesDataObj);

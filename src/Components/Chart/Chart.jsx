@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import ChartBar from './ChartBar';
-import '../../Styles/Chart.scss';
+import ChartBar from "./ChartBar";
+import "../../Styles/Chart.scss";
 
-const Chart = ({ dataPoints }) => {
+const Chart = (props) => {
+  const { dataPoints } = props;
   const dataPointValues = dataPoints.map((dataPoint) => dataPoint.value);
   const totalMaximum = Math.max(...dataPointValues);
 

@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import ExpanseDate from './ExpanseDate';
-import Card from '../UI/Card';
-import '../../Styles/ExpenseItem.scss';
+import ExpanseDate from "./ExpanseDate";
+import Card from "../UI/Card";
+import "../../Styles/ExpenseItem.scss";
 
-const ExpenseItem = ({ title, amount, date }) => {
+const ExpenseItem = (props) => {
+  const { title, amount, date } = props;
   // useState untuk inisialisasi perubahan pada tag atau data components
   // const [titles, setTitles] = useState(title);
 

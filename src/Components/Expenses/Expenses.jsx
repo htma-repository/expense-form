@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import Card from '../UI/Card';
-import ExpensesFilter from './ExpensesFilter';
-import ExpensesList from './ExpensesList';
-import ExpensesChart from './ExpensesChart';
-import '../../Styles/Expenses.scss';
+import Card from "../UI/Card";
+import ExpensesFilter from "./ExpensesFilter";
+import ExpensesList from "./ExpensesList";
+import ExpensesChart from "./ExpensesChart";
+import "../../Styles/Expenses.scss";
 
-const Expenses = ({ items }) => {
-  const [filterYear, setFilterYear] = useState('2022');
+const Expenses = (props) => {
+  const { items } = props;
+  const [filterYear, setFilterYear] = useState("2022");
 
   const yearFilterHandler = (selectedYear) => {
     setFilterYear(selectedYear);

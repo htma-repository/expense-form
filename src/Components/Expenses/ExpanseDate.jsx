@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import '../../Styles/ExpanseDate.scss';
-import Card from '../UI/Card';
+import "../../Styles/ExpanseDate.scss";
+import Card from "../UI/Card";
 
-const ExpanseDate = ({ dates }) => {
-  const month = dates.toLocaleString('en-Us', { month: 'long' });
-  const day = dates.toLocaleString('en-US', { day: '2-digit' });
+const ExpanseDate = (props) => {
+  const { dates } = props;
+  const month = dates.toLocaleString("en-Us", { month: "long" });
+  const day = dates.toLocaleString("en-US", { day: "2-digit" });
   const year = dates.getFullYear();
 
   return (

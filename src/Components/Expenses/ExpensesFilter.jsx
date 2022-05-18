@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import '../../Styles/ExpensesFilter.scss';
+import "../../Styles/ExpensesFilter.scss";
 
-const ExpensesFilter = ({ selected, onChangeFilter }) => {
+const ExpensesFilter = (props) => {
+  const { selected, onChangeFilter } = props;
   const clickYearHandler = (e) => {
     onChangeFilter(e.target.value);
   };

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import Expenses from './Components/Expenses/Expenses';
-import ExpenseFormWrapper from './Components/ExpenseNew/ExpenseFormWrapper';
+import Expenses from "./Components/Expenses/Expenses";
+import ExpenseFormWrapper from "./Components/ExpenseForm/ExpenseFormWrapper";
 
 // class Expense {
 //   constructor(id, title, amount) {
